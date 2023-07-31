@@ -1,0 +1,30 @@
+python 3.8
+
+python -m venv myenv
+myenv\Scripts\activate
+
+pip install pandas
+pip install numpy
+pip install Cython>=0.28.5
+pip install scipy==1.11.1
+pip install scikit-learn==0.24.2
+pip install flask
+pip install matplotlib
+pip install flask-mysqldb
+pip install mysqlclient
+
+mysql -u pradeepth -p -P 3000
+SHOW DATABASES;
+USE heartdisease;
+SHOW COLUMNS FROM login;
+CREATE TABLE login (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+USE heartdisease;
+
+INSERT INTO login (username, password) VALUES ('example_user', 'hashed_password_here');
+CREATE DATABASE heartdisease;
+
+
